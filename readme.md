@@ -1,10 +1,10 @@
 # Trip Multi-Module Application
 
-이 프로젝트는 여러 모듈을 통합하여 구성된 멀티모듈 Spring Boot 애플리케이션으로, 회원 관리, API 게이트웨이, 데이터 동기화 등의 기능을 제공합니다. 각 모듈은 독립적인 역할을 수행하며, 전체 시스템의 유기적인 동작을 지원합니다.
+이 프로젝트는 여러 모듈을 통합하여 구성된 멀티모듈 Spring Boot 애플리케이션으로, 회원 관리, API 게이트웨이, 데이터 동기화, 대시보드 등의 기능을 제공합니다. 각 모듈은 독립적인 역할을 수행하며, 전체 시스템의 동작을 지원합니다.
 
 ## 프로젝트 구성도
 
-![image](https://github.com/user-attachments/assets/multimodule-system-architecture.png)
+![trip-structure drawio](https://github.com/user-attachments/assets/164e358d-c3c3-4022-b7ca-c46ac3f5563a)
 
 ## 요구사항
 
