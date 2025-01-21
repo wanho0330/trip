@@ -1,0 +1,26 @@
+group = 'com.trip'
+version = '0.0.1-SNAPSHOT'
+
+dependencies {
+
+    implementation project(':common')
+    implementation project(':member')
+
+
+    // kafka
+    implementation 'org.springframework.boot:spring-boot-starter'
+    implementation 'org.springframework.kafka:spring-kafka'
+
+    // mongodb
+    implementation 'org.springframework.boot:spring-boot-starter-data-mongodb'
+
+    // elasticsearch
+    implementation 'org.springframework.boot:spring-boot-starter-data-elasticsearch'
+}
+
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
+
+tasks.register("prepareKotlinBuildScriptModel"){}

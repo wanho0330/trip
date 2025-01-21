@@ -1,0 +1,27 @@
+group = 'com.trip'
+version = '0.0.1-SNAPSHOT'
+
+dependencies {
+
+	implementation project(':member')
+	implementation project(':common')
+
+	// auth jwt
+	implementation 'org.springframework.boot:spring-boot-starter-security'
+	implementation 'io.jsonwebtoken:jjwt-api:0.11.5'
+	implementation 'io.jsonwebtoken:jjwt-impl:0.11.5'
+	implementation 'io.jsonwebtoken:jjwt-jackson:0.11.5'
+	implementation 'org.springframework.boot:spring-boot-starter-data-redis'
+	implementation 'org.springframework.boot:spring-boot-starter-cache'
+	testImplementation 'org.springframework.security:spring-security-test'
+
+	// kafka
+	implementation 'org.springframework.boot:spring-boot-starter'
+	implementation 'org.springframework.kafka:spring-kafka'
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
+
+tasks.register("prepareKotlinBuildScriptModel"){}

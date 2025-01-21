@@ -1,0 +1,46 @@
+server:
+  port: 8084
+  error:
+    include-stacktrace: never
+spring:
+  application:
+    name: sync
+  output:
+    ansi:
+      enabled: always
+  main:
+    allow-bean-definition-overriding: true
+  h2:
+    console:
+      enabled: true
+      path: /h2
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:testdb
+    hikari:
+      connection-timeout: 5000
+      maximum-pool-size: 10
+  data:
+    redis:
+      host: localhost
+      port: 6379
+      password:
+    mongodb:
+      uri: mongodb://localhost/event
+      database: event_database
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer:
+      group-id: consumer-member-service
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+    properties:
+      spring.json.trusted.packages: "*"
+      default.api.timeout.ms: 5000
+  elasticsearch:
+    uris: http://localhost:9200
+    username: elastic
+    password: elastic
+logging:
+  level:
+    org.springframework.jdbc.core: TRACE

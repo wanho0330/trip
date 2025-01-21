@@ -1,0 +1,8 @@
+group = 'com.trip'
+version = '0.0.1-SNAPSHOT'
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
+
+tasks.register("prepareKotlinBuildScriptModel"){}

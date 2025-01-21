@@ -1,0 +1,21 @@
+group = 'com.trip'
+version = '0.0.1-SNAPSHOT'
+
+dependencies {
+
+    implementation project(':common')
+    implementation project(':config')
+    implementation project(':auth')
+
+    // elasticsearch
+    implementation 'org.springframework.boot:spring-boot-starter-data-elasticsearch'
+
+    // spring security
+    testImplementation 'org.springframework.security:spring-security-test'
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
+
+tasks.register("prepareKotlinBuildScriptModel"){}

@@ -1,0 +1,9 @@
+rootProject.name = 'root'
+
+include ':config'
+include ':member'
+include ':common'
+include ':auth'
+include ':dashboard'
+include ':sync'
+include ':gateway'

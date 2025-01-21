@@ -1,0 +1,22 @@
+server:
+  port: 8083
+  error:
+    include-stacktrace: never
+spring:
+  application:
+    name: dashboard
+  output:
+    ansi:
+      enabled: always
+  data:
+    redis:
+      host: localhost
+      port: 6379
+      password:
+  elasticsearch:
+    uris: http://localhost:9200
+    username: elastic
+    password: elastic
+logging:
+  level:
+    org.springframework.jdbc.core: TRACE
